@@ -1,0 +1,27 @@
+import oracledb
+conexao = oracledb.connect(
+    user="bd240223135",
+    password="Ljfvl6",
+    dsn="172.16.12.14/xe")
+cursor = conexao.cursor()
+cursor.execute(f'INSERT INTO AMOSTRAS (MP10, MP2_5, O3, CO, NO2, SO2) VALUES (0, 0, 0, 0, 0, 0)')
+conexao.commit()
+cursor.execute('INSERT INTO AMOSTRAS (MP10, MP2_5, O3, CO, NO2, SO2) VALUES (50, 25, 100, 9, 200, 20)')
+conexao.commit()
+cursor.execute('INSERT INTO AMOSTRAS (MP10, MP2_5, O3, CO, NO2, SO2) VALUES (51, 0, 0, 0, 0, 0)')
+conexao.commit()
+cursor.execute('INSERT INTO AMOSTRAS (MP10, MP2_5, O3, CO, NO2, SO2) VALUES (100, 26, 0, 0, 0, 0)')
+conexao.commit()
+cursor.execute('INSERT INTO AMOSTRAS (MP10, MP2_5, O3, CO, NO2, SO2) VALUES (0, 0, 131, 0, 0, 0)')
+conexao.commit()
+cursor.execute('INSERT INTO AMOSTRAS (MP10, MP2_5, O3, CO, NO2, SO2) VALUES (0, 0, 160, 12, 0, 0)')
+conexao.commit()
+cursor.execute('INSERT INTO AMOSTRAS (MP10, MP2_5, O3, CO, NO2, SO2) VALUES (0, 0, 0, 0, 321, 0)')
+conexao.commit()
+cursor.execute('INSERT INTO AMOSTRAS (MP10, MP2_5, O3, CO, NO2, SO2) VALUES (0, 0, 0, 0, 1130, 366)')
+conexao.commit()
+cursor.execute('INSERT INTO AMOSTRAS (MP10, MP2_5, O3, CO, NO2, SO2) VALUES (251, 0, 0, 0, 0, 0)')
+conexao.commit()
+cursor.execute('INSERT INTO AMOSTRAS (MP10, MP2_5, O3, CO, NO2, SO2) VALUES (251, 126, 0, 0, 0, 0)')
+conexao.commit()
+cursor.close()
